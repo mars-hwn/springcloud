@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alonginfo.psmpportal.ZlxxGL.dao.JcttsDao" >
+
+ <sql id="jctts"> id,zflid,num,company,intro,tel</sql>
+   <!--查询jctts信息列表 -->
+  <select id="queryAll" resultType="jctts" parameterType="jctts">
+    select <include refid="jctts"></include> from hbxqc_jctts
+    <where>
+      <if test="zflid != null and zflid!= ''" >
+        zflid = #{zflid}
+      </if>
+        <if test="company != null and company!= ''" >
+           and company = #{company}
+        </if>
+    </where>
+    order by num
+  </select>
+  <!-- 查询指定jctts详细 -->
+  <select id="queryOneJctts" resultType="jctts">
+    SELECT <include refid="jctts"></include> from hbxqc_jctts
+    where id = #{id}
+  </select>
+  <!-- 新增jctts信息 -->
+  <insert id="insertJctts" parameterType="jctts">
+    insert into hbxqc_jctts (
+    <include refid="jctts"></include>
+    ) values (
+    #{id},#{zflid},#{num},#{company},#{intro},#{tel}
+    )
+  </insert>
+   <!-- 更新资料信息 -->
+  <update id="updateJctts" parameterType="jctts">
+    update hbxqc_jctts
+    <set>
+      <if test="zflid!=null">
+        zflid = #{zflid},
+      </if>
+      <if test="num!=null">
+        num = #{num},
+      </if>
+      <if test="company!=null">
+        company = #{company},
+      </if>
+      <if test="intro!=null">
+        intro = #{intro},
+      </if>
+      <if test="tel!=null">
+        tel = #{tel},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <delete id="deleteJctts" >
+    delete from hbxqc_jctts
+    where id = #{id}
+  </delete>
+    <delete id="deleteJcttss" parameterType="java.lang.String">
+        delete from hbxqc_jctts
+        where id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <select id="queryByNums" resultType="jctts">
+        select id,num from hbxqc_jctts WHERE 1=1
+        <if test="num==1">
+          and num=1 or num=2 or num=3
+        </if>
+        <if test="num==2">
+           and  num=2 or num=3
+        </if>
+        <if test="num==3">
+           and num=3
+        </if>
+    </select>
+</mapper>

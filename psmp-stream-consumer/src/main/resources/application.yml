@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /portal
+
+spring:
+  application:
+    name: psmp-stream-consumer
+  datasource:
+    url: jdbc:dm://localhost:5236/D5000?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: D5000
+    password: 123456789
+    driver-class-name: dm.jdbc.driver.DmDriver
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers:
+          - localhost:9092
+      bindings:
+        input:
+          binder: kafka
+          destination: test1
+          content-type: application/json
+          group: input-group-1
+  profiles:
+    active: dev

@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /api
+app:
+  id: apollo-agteway
+  # apollo服务地址
+apollo:
+  meta: http://localhost:8080
+
+spring:
+  application:
+    name: api-gateway
+
+  profiles:
+    active: dev

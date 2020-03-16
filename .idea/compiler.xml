@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="psmp-client" />
+        <module name="psmp-client-test" />
+        <module name="psmp-core" />
+        <module name="psmp-eureka-server" />
+        <module name="psmp-portal" />
+        <module name="psmp-portal-gateway" />
+        <module name="psmp-portal-website" />
+        <module name="psmp-stream-consumer" />
+        <module name="psmp-stream-producer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="psmp-stream-consumer1" target="1.8" />
+      <module name="psmp-stream-consumer2" target="1.8" />
+      <module name="psmp-stream-consumer3" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="psmp-core" options="" />
+      <module name="psmp-eureka-server" options="" />
+      <module name="psmp-portal" options="" />
+      <module name="psmp-portal-gateway" options="" />
+      <module name="psmp-portal-website" options="" />
+    </option>
+  </component>
+</project>

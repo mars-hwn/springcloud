@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alonginfo.psmpportal.ZlxxGL.dao.ZlxxGLDao" >
+
+   <!--查询资料信息列表 -->
+  <select id="queryList" resultType="zlxxGL" parameterType="zlxxGL">
+    select
+      id,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      state,
+      fjurl,
+      source,
+      line,
+      DATE_FORMAT(time,'%Y-%m-%d') time,
+      content
+    from hbxqc_zlxx
+    <where>
+      <if test="zflid != null and zflid!= ''" >
+        zflid = #{zflid}
+      </if>
+      <if test="title != null and title!= ''" >
+        and title like concat('%',#{title},'%')
+      </if>
+      <if test="time != null and time!= ''" >
+        and date_format(time, '%Y-%m') = #{time}
+      </if>
+    </where>
+    order by num
+  </select>
+  <!-- 查询指定资料详细 -->
+  <select id="queryOneZlxx" resultType="zlxxGL">
+    SELECT
+      id,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      state,
+      fjurl,
+      source,
+      line,
+      content
+    from hbxqc_zlxx
+    where id = #{id}
+  </select>
+  <!-- 新增资料信息 -->
+  <insert id="insertZlxx" parameterType="zlxxGL">
+    insert into hbxqc_zlxx (
+      id,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      state,
+      fjurl,
+      source,
+      line,
+      time,
+      content
+    ) values (
+    #{id},#{zflid},#{num},#{title},#{plurl},
+    #{tpgs},#{tpdx},#{state},#{fjurl},#{source},#{line},sysdate(),#{content}
+    )
+  </insert>
+   <!-- 更新资料信息 -->
+  <update id="updateZlxx" parameterType="zlxxGL">
+    update hbxqc_zlxx
+    <set>
+      <if test="zflid!=null">
+        zflid = #{zflid},
+      </if>
+      <if test="num!=null">
+        num = #{num},
+      </if>
+      <if test="title!=null">
+        title = #{title},
+      </if>
+      <if test="plurl!=null">
+        plurl = #{plurl},
+      </if>
+      <if test="tpgs!=null">
+        tpgs = #{tpgs},
+      </if>
+      <if test="tpdx!=null">
+        tpdx = #{tpdx},
+      </if>
+      <if test="source!=null">
+        source = #{source},
+      </if>
+      <if test="time!=null">
+        time = #{time},
+      </if>
+      <if test="state!=null">
+        state = #{state},
+      </if>
+      <if test="content!=null">
+        content = #{content},
+      </if>
+      <if test="line!=null">
+        line = #{line},
+      </if>
+      <if test="fjurl!=null">
+        fjurl = #{fjurl},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+  <delete id="deleteZlxx" >
+    delete from hbxqc_zlxx
+    where id = #{id}
+  </delete>
+  <delete id="deleteZlxxs" parameterType="java.lang.String">
+    delete from hbxqc_zlxx
+    where id IN
+    <foreach collection="ids" item="id" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </delete>
+  <select id="queryByNums" resultType="zlxxGL">
+    select id,num from hbxqc_zlxx WHERE 1=1
+    <if test="num==1">
+      and num=1 or num=2 or num=3
+    </if>
+    <if test="num==2">
+      and  num=2 or num=3
+    </if>
+    <if test="num==3">
+      and num=3
+    </if>
+  </select>
+</mapper>

@@ -1,0 +1,770 @@
+2019-01-14 19:07:35,392 INFO [org.springframework.context.annotation.AnnotationConfigApplicationContext-590]- Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@47f4e407: startup date [Mon Jan 14 19:07:35 CST 2019]; root of context hierarchy
+2019-01-14 19:07:35,675 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:07:35,715 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b0ab7e0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:07:35,944 INFO [com.alonginfo.psmpportal.PsmpPortalApplication-663]- The following profiles are active: dev
+2019-01-14 19:07:35,962 INFO [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-590]- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2228db21: startup date [Mon Jan 14 19:07:35 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@47f4e407
+2019-01-14 19:07:36,574 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate-163]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-14 19:07:36,893 INFO [org.springframework.cloud.context.scope.GenericScope-294]- BeanFactory id=3aefe2fe-d2ea-382b-a285-1fee28213070
+2019-01-14 19:07:36,910 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:07:37,010 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94917b0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:07:37,051 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b0ab7e0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:07:37,292 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-91]- Tomcat initialized with port(s): 8081 (http)
+2019-01-14 19:07:37,304 INFO [org.apache.coyote.http11.Http11NioProtocol-180]- Initializing ProtocolHandler ["http-nio-8081"]
+2019-01-14 19:07:37,317 INFO [org.apache.catalina.core.StandardService-180]- Starting service [Tomcat]
+2019-01-14 19:07:37,317 INFO [org.apache.catalina.core.StandardEngine-180]- Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-14 19:07:37,321 INFO [org.apache.catalina.core.AprLifecycleListener-180]- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liqiang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-14 19:07:37,439 INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/portal]-180]- Initializing Spring embedded WebApplicationContext
+2019-01-14 19:07:37,439 INFO [org.springframework.web.context.ContextLoader-285]- Root WebApplicationContext: initialization completed in 1477 ms
+2019-01-14 19:07:37,689 INFO [org.springframework.boot.web.servlet.ServletRegistrationBean-186]- Servlet dispatcherServlet mapped to [/]
+2019-01-14 19:07:37,694 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-14 19:07:37,694 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-14 19:07:37,694 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-14 19:07:37,694 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-14 19:07:38,113 INFO [com.alibaba.druid.pool.DruidDataSource-947]- {dataSource-1} inited
+2019-01-14 19:08:53,601 ERROR [com.alibaba.druid.pool.DruidDataSource-2507]- create connection SQLException, url: jdbc:mysql://122.113.5.202:3306/hbwz_data, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1570)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2505)
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2019-01-14 19:10:14,020 INFO [org.springframework.context.annotation.AnnotationConfigApplicationContext-590]- Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1: startup date [Mon Jan 14 19:10:14 CST 2019]; root of context hierarchy
+2019-01-14 19:10:14,466 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:10:14,524 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d42ea1a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:10:14,792 INFO [com.alonginfo.psmpportal.PsmpPortalApplication-663]- The following profiles are active: dev
+2019-01-14 19:10:14,808 INFO [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-590]- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ad11a56: startup date [Mon Jan 14 19:10:14 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1
+2019-01-14 19:10:15,433 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate-163]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-14 19:10:15,736 INFO [org.springframework.cloud.context.scope.GenericScope-294]- BeanFactory id=3aefe2fe-d2ea-382b-a285-1fee28213070
+2019-01-14 19:10:15,752 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:10:15,848 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b8149ea6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:10:15,882 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d42ea1a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:10:16,133 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-91]- Tomcat initialized with port(s): 8081 (http)
+2019-01-14 19:10:16,145 INFO [org.apache.coyote.http11.Http11NioProtocol-180]- Initializing ProtocolHandler ["http-nio-8081"]
+2019-01-14 19:10:16,156 INFO [org.apache.catalina.core.StandardService-180]- Starting service [Tomcat]
+2019-01-14 19:10:16,156 INFO [org.apache.catalina.core.StandardEngine-180]- Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-14 19:10:16,160 INFO [org.apache.catalina.core.AprLifecycleListener-180]- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liqiang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-14 19:10:16,289 INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/portal]-180]- Initializing Spring embedded WebApplicationContext
+2019-01-14 19:10:16,289 INFO [org.springframework.web.context.ContextLoader-285]- Root WebApplicationContext: initialization completed in 1481 ms
+2019-01-14 19:10:16,579 INFO [org.springframework.boot.web.servlet.ServletRegistrationBean-186]- Servlet dispatcherServlet mapped to [/]
+2019-01-14 19:10:16,589 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-14 19:10:16,590 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-14 19:10:16,590 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-14 19:10:16,590 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-14 19:10:16,915 INFO [com.alibaba.druid.pool.DruidDataSource-947]- {dataSource-1} inited
+2019-01-14 19:11:32,355 ERROR [com.alibaba.druid.pool.DruidDataSource-2507]- create connection SQLException, url: jdbc:mysql://122.113.5.202:3306/hbwz_data, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1570)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2505)
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2019-01-14 19:12:47,782 ERROR [com.alibaba.druid.pool.DruidDataSource-2507]- create connection SQLException, url: jdbc:mysql://122.113.5.202:3306/hbwz_data, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1570)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2505)
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2019-01-14 19:14:03,753 ERROR [com.alibaba.druid.pool.DruidDataSource-2507]- create connection SQLException, url: jdbc:mysql://122.113.5.202:3306/hbwz_data, errorCode 0, state 08S01
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1570)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2505)
+Caused by: java.net.ConnectException: Operation timed out (Connection timed out)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 15 common frames omitted
+2019-01-14 19:14:04,591 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.bannerGL.model.BannerGL.
+2019-01-14 19:14:04,591 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.bannerGL.model.BannerGL ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:14:04,646 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.caseGL.model.CaseGL.
+2019-01-14 19:14:04,647 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.caseGL.model.CaseGL ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:14:04,692 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.informationMgt.model.InformationMgt.
+2019-01-14 19:14:04,692 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.informationMgt.model.InformationMgt ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:14:05,243 WARN [com.netflix.config.sources.URLConfigurationSource-121]- No URLs will be polled as dynamic configuration sources.
+2019-01-14 19:14:05,244 INFO [com.netflix.config.sources.URLConfigurationSource-122]- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-14 19:14:05,254 WARN [com.netflix.config.sources.URLConfigurationSource-121]- No URLs will be polled as dynamic configuration sources.
+2019-01-14 19:14:05,255 INFO [com.netflix.config.sources.URLConfigurationSource-122]- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-14 19:14:05,376 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:14:05,601 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-574]- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ad11a56: startup date [Mon Jan 14 19:10:14 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1
+2019-01-14 19:14:05,619 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-610]- Detected ResponseBodyAdvice bean in responseJsonAdvice
+2019-01-14 19:14:05,700 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttsUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:14:05,701 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:14:05,702 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.ZlxxGL.model.Jctts com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.queryOneJctts(java.lang.String)
+2019-01-14 19:14:05,703 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[POST]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.createJctts(com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:14:05,703 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[PUT]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.updateJctts(com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:14:05,704 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.deletejctts(java.lang.String)
+2019-01-14 19:14:05,704 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.deletejcttss(java.lang.String[])
+2019-01-14 19:14:05,705 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materialUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:14:05,706 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:14:05,706 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.queryOneZlxx(java.lang.String)
+2019-01-14 19:14:05,707 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[POST]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.createZlxx(com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:14:05,707 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[PUT]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.updateIZlxx(com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:14:05,708 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.deleteZlxx(java.lang.String)
+2019-01-14 19:14:05,708 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.deleteZlxxs(java.lang.String[])
+2019-01-14 19:14:05,712 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.bannerGL.model.BannerGL com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.queryOneBanner(java.lang.String)
+2019-01-14 19:14:05,712 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[POST]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.createBanner(com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:14:05,713 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[PUT]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.updateBanner(com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:14:05,713 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.deleteBanners(java.lang.String[])
+2019-01-14 19:14:05,713 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.deleteBanner(java.lang.String)
+2019-01-14 19:14:05,714 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/bannerUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:14:05,714 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:14:05,716 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.caseGL.model.CaseGL com.alonginfo.psmpportal.caseGL.controller.CaseGLController.queryOneCase(java.lang.String)
+2019-01-14 19:14:05,716 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[POST]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.createCase(com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:14:05,717 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[PUT]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.updateCase(com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:14:05,717 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.deleteCase(java.lang.String[])
+2019-01-14 19:14:05,717 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.deleteCase(java.lang.String)
+2019-01-14 19:14:05,718 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/caseUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.caseGL.controller.CaseGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:14:05,718 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.caseGL.controller.CaseGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:14:05,720 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.informationMgt.model.InformationMgt com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.queryDetail(java.lang.String)
+2019-01-14 19:14:05,720 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[POST]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.createInformation(com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:14:05,721 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[PUT]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.updateInformation(com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:14:05,721 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.deleteInformation(java.lang.String)
+2019-01-14 19:14:05,721 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.deleteInformations(java.lang.String[])
+2019-01-14 19:14:05,721 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informationUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:14:05,722 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:14:05,722 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/menus/{value}],methods=[GET]}" onto public java.util.List<com.alonginfo.psmpportal.menuGL.model.Menu> com.alonginfo.psmpportal.menuGL.controller.MenuController.queryList(java.lang.Integer)
+2019-01-14 19:14:05,723 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/error]}" onto public void com.alonginfo.psmpcore.exception.MyErrorController.errorHandler()
+2019-01-14 19:14:05,760 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:14:05,760 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:14:05,779 INFO [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver-288]- Detected @ExceptionHandler methods in globalExceptionHandler
+2019-01-14 19:14:05,780 INFO [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver-294]- Detected ResponseBodyAdvice implementation in responseJsonAdvice
+2019-01-14 19:14:06,894 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-433]- Registering beans for JMX exposure on startup
+2019-01-14 19:14:06,896 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-14 19:14:06,911 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-01-14 19:14:06,912 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-01-14 19:14:06,912 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-01-14 19:14:06,919 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-01-14 19:14:06,938 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-01-14 19:14:06,955 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6ad11a56,type=ConfigurationPropertiesRebinder]
+2019-01-14 19:14:06,962 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-668]- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-14 19:14:06,966 INFO [org.springframework.context.support.DefaultLifecycleProcessor-351]- Starting beans in phase 0
+2019-01-14 19:14:06,976 INFO [org.springframework.cloud.netflix.eureka.InstanceInfoFactory-71]- Setting initial instance status as: STARTING
+2019-01-14 19:14:07,040 INFO [com.netflix.discovery.DiscoveryClient-349]- Initializing Eureka in region us-east-1
+2019-01-14 19:14:07,277 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-70]- Using JSON encoding codec LegacyJacksonJson
+2019-01-14 19:14:07,277 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-71]- Using JSON decoding codec LegacyJacksonJson
+2019-01-14 19:14:07,428 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-80]- Using XML encoding codec XStreamXml
+2019-01-14 19:14:07,429 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-81]- Using XML decoding codec XStreamXml
+2019-01-14 19:14:07,673 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-958]- Disable delta property : false
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-959]- Single vip registry refresh property : null
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-960]- Force full registry fetch : false
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-961]- Application is null : false
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-962]- Registered Applications size is zero : true
+2019-01-14 19:14:07,693 INFO [com.netflix.discovery.DiscoveryClient-964]- Application version is -1: true
+2019-01-14 19:14:07,694 INFO [com.netflix.discovery.DiscoveryClient-1047]- Getting all instance registry info from the eureka server
+2019-01-14 19:14:07,962 INFO [com.netflix.discovery.DiscoveryClient-1056]- The response status is 200
+2019-01-14 19:14:07,965 INFO [com.netflix.discovery.DiscoveryClient-1264]- Starting heartbeat executor: renew interval is: 30
+2019-01-14 19:14:07,967 INFO [com.netflix.discovery.InstanceInfoReplicator-60]- InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-01-14 19:14:07,971 INFO [com.netflix.discovery.DiscoveryClient-449]- Discovery Client initialized at timestamp 1547464447970 with initial instances count: 1
+2019-01-14 19:14:07,977 INFO [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry-42]- Registering application psmp-portal with eureka with status UP
+2019-01-14 19:14:07,978 INFO [com.netflix.discovery.DiscoveryClient-1299]- Saw local status change event StatusChangeEvent [timestamp=1547464447978, current=UP, previous=STARTING]
+2019-01-14 19:14:07,980 INFO [com.netflix.discovery.DiscoveryClient-826]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081: registering service...
+2019-01-14 19:14:08,009 INFO [org.apache.coyote.http11.Http11NioProtocol-180]- Starting ProtocolHandler ["http-nio-8081"]
+2019-01-14 19:14:08,033 INFO [com.netflix.discovery.DiscoveryClient-835]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081 - registration status: 204
+2019-01-14 19:14:08,047 INFO [org.apache.tomcat.util.net.NioSelectorPool-180]- Using a shared selector for servlet write/read
+2019-01-14 19:14:08,070 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-206]- Tomcat started on port(s): 8081 (http) with context path '/portal'
+2019-01-14 19:14:08,071 INFO [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration-124]- Updating port to 8081
+2019-01-14 19:14:08,077 INFO [com.alonginfo.psmpportal.PsmpPortalApplication-59]- Started PsmpPortalApplication in 234.841 seconds (JVM running for 236.412)
+2019-01-14 19:19:07,713 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:24:08,773 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:29:08,779 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:32:50,987 INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/portal]-180]- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-14 19:32:50,988 INFO [org.springframework.web.servlet.DispatcherServlet-494]- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-14 19:32:51,007 INFO [org.springframework.web.servlet.DispatcherServlet-509]- FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2019-01-14 19:32:51,115 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==>  Preparing: select zflid,flmc from hbxqc_menu2 WHERE 1=1 
+2019-01-14 19:32:51,137 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==> Parameters: 
+2019-01-14 19:32:51,151 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==    Columns: zflid, flmc
+2019-01-14 19:32:51,152 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100101, 新闻中心 
+2019-01-14 19:32:51,155 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100102, 政策法规
+2019-01-14 19:32:51,156 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100103, 宣传培训
+2019-01-14 19:32:51,156 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100104, 技术应用
+2019-01-14 19:32:51,156 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100105, 亚行贷款
+2019-01-14 19:32:51,157 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100106, 电能服务
+2019-01-14 19:32:51,157 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100107, 电力交易
+2019-01-14 19:32:51,157 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100108, 需求响应
+2019-01-14 19:32:51,158 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100201, 首页
+2019-01-14 19:32:51,158 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100202, 政策法规
+2019-01-14 19:32:51,158 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100301, 技术应用
+2019-01-14 19:32:51,158 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100302, 电能服务
+2019-01-14 19:32:51,159 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100303, 需求响应
+2019-01-14 19:32:51,159 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100401, 宣传培训
+2019-01-14 19:32:51,159 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100402, 技术应用
+2019-01-14 19:32:51,160 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100403, 亚行贷款
+2019-01-14 19:32:51,161 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100404, DSM考核
+2019-01-14 19:32:51,161 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010101, 新闻动态
+2019-01-14 19:32:51,161 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010102, 中心动态
+2019-01-14 19:32:51,161 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010201, 省内政策
+2019-01-14 19:32:51,162 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010202, 国家政策
+2019-01-14 19:32:51,162 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010203, 地方政策
+2019-01-14 19:32:51,162 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010301, 培训动态
+2019-01-14 19:32:51,162 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010401, 节约用电
+2019-01-14 19:32:51,163 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010402, 绿色用电
+2019-01-14 19:32:51,163 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010403, 环保用电
+2019-01-14 19:32:51,163 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010404, 智能用电
+2019-01-14 19:32:51,163 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010405, 有序用电
+2019-01-14 19:32:51,163 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010501, 项目进展
+2019-01-14 19:32:51,164 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010601, 服务模式
+2019-01-14 19:32:51,164 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010701, 最新政策
+2019-01-14 19:32:51,164 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010702, 通知公告
+2019-01-14 19:32:51,164 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010801, 需求响应
+2019-01-14 19:32:51,165 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030101, 节约用电
+2019-01-14 19:32:51,165 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030102, 绿色用电
+2019-01-14 19:32:51,165 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030103, 环保用电
+2019-01-14 19:32:51,165 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030104, 智能用电
+2019-01-14 19:32:51,166 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030105, 有序用电
+2019-01-14 19:32:51,166 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030201, 典型案例
+2019-01-14 19:32:51,166 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030301, 典型案例
+2019-01-14 19:32:51,166 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040101, 公益宣传
+2019-01-14 19:32:51,167 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040102, 培训资料
+2019-01-14 19:32:51,167 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040201, 节约用电
+2019-01-14 19:32:51,168 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040202, 绿色用电
+2019-01-14 19:32:51,169 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040203, 环保用电
+2019-01-14 19:32:51,170 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040204, 智能用电
+2019-01-14 19:32:51,171 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040205, 有序用电
+2019-01-14 19:32:51,171 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040301, 贷款资料
+2019-01-14 19:32:51,171 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040401, 考核报告
+2019-01-14 19:32:51,172 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010101, 典型案例
+2019-01-14 19:32:51,172 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010201, 典型案例
+2019-01-14 19:32:51,172 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010301, 典型案例
+2019-01-14 19:32:51,172 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010401, 典型案例
+2019-01-14 19:32:51,173 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010501, 典型案例
+2019-01-14 19:32:51,173 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020101, 技术资料
+2019-01-14 19:32:51,173 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020102, 技术产品提供商
+2019-01-14 19:32:51,173 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020201, 技术资料
+2019-01-14 19:32:51,174 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020202, 技术产品提供商
+2019-01-14 19:32:51,174 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020301, 技术资料
+2019-01-14 19:32:51,174 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020302, 技术产品提供商
+2019-01-14 19:32:51,174 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020401, 技术资料
+2019-01-14 19:32:51,174 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020402, 技术产品提供商
+2019-01-14 19:32:51,175 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020501, 技术资料
+2019-01-14 19:32:51,175 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020502, 技术产品提供商
+2019-01-14 19:32:51,175 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- <==      Total: 64
+2019-01-14 19:32:51,415 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: SELECT COUNT(1) FROM hbxqc_zxxx 
+2019-01-14 19:32:51,416 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:32:51,417 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: COUNT(1)
+2019-01-14 19:32:51,418 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 42
+2019-01-14 19:32:51,423 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: select zxid, num, title, zflid, source, DATE_FORMAT(time,'%Y-%m-%d') time, state, inds from hbxqc_zxxx order by num LIMIT 0,10 
+2019-01-14 19:32:51,424 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:32:51,425 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: zxid, num, title, zflid, source, time, state, inds
+2019-01-14 19:32:51,426 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: a341deb2e5ef40d6a7e3838046a0c294, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:32:51,426 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 2b4a860b2fed48b093b3dec10e3cfc5a, , , null, , 2019-01-03, 1, 
+2019-01-14 19:32:51,427 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 37db3e249d65432a88db48003fa9fce1, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:32:51,427 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 8627d9e73911401498502bf2847a5cf5, , , null, , 2019-01-07, 0, 
+2019-01-14 19:32:51,428 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: fa1a43c6397947b684ef56ca6d707514, , qqqqq, 10010102, , 2019-01-03, 1, 
+2019-01-14 19:32:51,428 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 6d1ad1e349b34d3aa2735f1eb46567e6, , , null, , 2019-01-07, 1, 
+2019-01-14 19:32:51,428 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1fc939ff73f14423b3b5068a95fdb5cc, , , null, , 2019-01-03, 1, 
+2019-01-14 19:32:51,429 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 9a5d7746ab424ac1aa88526a8bc01e43, , , null, , 2019-01-03, 1, 
+2019-01-14 19:32:51,429 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1c51395275ed4d5c8aa9c80ab7e65dc2, , , null, , 2019-01-07, 1, 
+2019-01-14 19:32:51,429 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 7993f6352c364d19b43f62c7b04f4e67, , , null, , 2019-01-08, 0, 
+2019-01-14 19:32:51,430 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- <==      Total: 10
+2019-01-14 19:33:41,444 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==>  Preparing: select zflid,flmc from hbxqc_menu2 WHERE 1=1 
+2019-01-14 19:33:41,446 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==> Parameters: 
+2019-01-14 19:33:41,450 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==    Columns: zflid, flmc
+2019-01-14 19:33:41,452 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100101, 新闻中心 
+2019-01-14 19:33:41,453 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100102, 政策法规
+2019-01-14 19:33:41,454 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100103, 宣传培训
+2019-01-14 19:33:41,454 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100104, 技术应用
+2019-01-14 19:33:41,455 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100105, 亚行贷款
+2019-01-14 19:33:41,455 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100106, 电能服务
+2019-01-14 19:33:41,455 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100107, 电力交易
+2019-01-14 19:33:41,456 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100108, 需求响应
+2019-01-14 19:33:41,458 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100201, 首页
+2019-01-14 19:33:41,459 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100202, 政策法规
+2019-01-14 19:33:41,459 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100301, 技术应用
+2019-01-14 19:33:41,460 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100302, 电能服务
+2019-01-14 19:33:41,460 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100303, 需求响应
+2019-01-14 19:33:41,460 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100401, 宣传培训
+2019-01-14 19:33:41,461 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100402, 技术应用
+2019-01-14 19:33:41,461 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100403, 亚行贷款
+2019-01-14 19:33:41,461 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100404, DSM考核
+2019-01-14 19:33:41,461 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010101, 新闻动态
+2019-01-14 19:33:41,462 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010102, 中心动态
+2019-01-14 19:33:41,462 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010201, 省内政策
+2019-01-14 19:33:41,462 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010202, 国家政策
+2019-01-14 19:33:41,463 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010203, 地方政策
+2019-01-14 19:33:41,464 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010301, 培训动态
+2019-01-14 19:33:41,464 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010401, 节约用电
+2019-01-14 19:33:41,467 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010402, 绿色用电
+2019-01-14 19:33:41,469 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010403, 环保用电
+2019-01-14 19:33:41,472 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010404, 智能用电
+2019-01-14 19:33:41,473 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010405, 有序用电
+2019-01-14 19:33:41,473 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010501, 项目进展
+2019-01-14 19:33:41,473 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010601, 服务模式
+2019-01-14 19:33:41,474 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010701, 最新政策
+2019-01-14 19:33:41,474 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010702, 通知公告
+2019-01-14 19:33:41,475 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010801, 需求响应
+2019-01-14 19:33:41,475 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030101, 节约用电
+2019-01-14 19:33:41,477 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030102, 绿色用电
+2019-01-14 19:33:41,478 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030103, 环保用电
+2019-01-14 19:33:41,480 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030104, 智能用电
+2019-01-14 19:33:41,480 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030105, 有序用电
+2019-01-14 19:33:41,481 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030201, 典型案例
+2019-01-14 19:33:41,481 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030301, 典型案例
+2019-01-14 19:33:41,482 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040101, 公益宣传
+2019-01-14 19:33:41,482 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040102, 培训资料
+2019-01-14 19:33:41,484 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040201, 节约用电
+2019-01-14 19:33:41,486 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040202, 绿色用电
+2019-01-14 19:33:41,487 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040203, 环保用电
+2019-01-14 19:33:41,489 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040204, 智能用电
+2019-01-14 19:33:41,489 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040205, 有序用电
+2019-01-14 19:33:41,490 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040301, 贷款资料
+2019-01-14 19:33:41,490 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040401, 考核报告
+2019-01-14 19:33:41,491 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010101, 典型案例
+2019-01-14 19:33:41,491 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010201, 典型案例
+2019-01-14 19:33:41,492 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010301, 典型案例
+2019-01-14 19:33:41,492 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010401, 典型案例
+2019-01-14 19:33:41,493 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010501, 典型案例
+2019-01-14 19:33:41,493 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020101, 技术资料
+2019-01-14 19:33:41,493 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020102, 技术产品提供商
+2019-01-14 19:33:41,494 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020201, 技术资料
+2019-01-14 19:33:41,494 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020202, 技术产品提供商
+2019-01-14 19:33:41,494 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020301, 技术资料
+2019-01-14 19:33:41,494 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020302, 技术产品提供商
+2019-01-14 19:33:41,495 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020401, 技术资料
+2019-01-14 19:33:41,495 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020402, 技术产品提供商
+2019-01-14 19:33:41,498 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020501, 技术资料
+2019-01-14 19:33:41,500 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020502, 技术产品提供商
+2019-01-14 19:33:41,501 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- <==      Total: 64
+2019-01-14 19:33:41,510 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: SELECT COUNT(1) FROM hbxqc_zxxx 
+2019-01-14 19:33:41,510 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:33:41,511 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: COUNT(1)
+2019-01-14 19:33:41,512 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 42
+2019-01-14 19:33:41,513 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: select zxid, num, title, zflid, source, DATE_FORMAT(time,'%Y-%m-%d') time, state, inds from hbxqc_zxxx order by num LIMIT 0,10 
+2019-01-14 19:33:41,513 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:33:41,515 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: zxid, num, title, zflid, source, time, state, inds
+2019-01-14 19:33:41,516 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: a341deb2e5ef40d6a7e3838046a0c294, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:33:41,517 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 2b4a860b2fed48b093b3dec10e3cfc5a, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:41,518 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 37db3e249d65432a88db48003fa9fce1, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:33:41,518 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 8627d9e73911401498502bf2847a5cf5, , , null, , 2019-01-07, 0, 
+2019-01-14 19:33:41,520 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: fa1a43c6397947b684ef56ca6d707514, , qqqqq, 10010102, , 2019-01-03, 1, 
+2019-01-14 19:33:41,520 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 6d1ad1e349b34d3aa2735f1eb46567e6, , , null, , 2019-01-07, 1, 
+2019-01-14 19:33:41,525 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1fc939ff73f14423b3b5068a95fdb5cc, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:41,526 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 9a5d7746ab424ac1aa88526a8bc01e43, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:41,526 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1c51395275ed4d5c8aa9c80ab7e65dc2, , , null, , 2019-01-07, 1, 
+2019-01-14 19:33:41,527 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 7993f6352c364d19b43f62c7b04f4e67, , , null, , 2019-01-08, 0, 
+2019-01-14 19:33:41,527 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- <==      Total: 10
+2019-01-14 19:33:53,981 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==>  Preparing: select zflid,flmc from hbxqc_menu2 WHERE 1=1 
+2019-01-14 19:33:53,982 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==> Parameters: 
+2019-01-14 19:33:53,984 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==    Columns: zflid, flmc
+2019-01-14 19:33:53,986 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100101, 新闻中心 
+2019-01-14 19:33:53,989 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100102, 政策法规
+2019-01-14 19:33:53,991 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100103, 宣传培训
+2019-01-14 19:33:53,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100104, 技术应用
+2019-01-14 19:33:53,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100105, 亚行贷款
+2019-01-14 19:33:53,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100106, 电能服务
+2019-01-14 19:33:53,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100107, 电力交易
+2019-01-14 19:33:53,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100108, 需求响应
+2019-01-14 19:33:53,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100201, 首页
+2019-01-14 19:33:53,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100202, 政策法规
+2019-01-14 19:33:53,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100301, 技术应用
+2019-01-14 19:33:53,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100302, 电能服务
+2019-01-14 19:33:53,994 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100303, 需求响应
+2019-01-14 19:33:53,994 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100401, 宣传培训
+2019-01-14 19:33:53,995 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100402, 技术应用
+2019-01-14 19:33:53,995 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100403, 亚行贷款
+2019-01-14 19:33:53,995 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100404, DSM考核
+2019-01-14 19:33:53,996 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010101, 新闻动态
+2019-01-14 19:33:53,999 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010102, 中心动态
+2019-01-14 19:33:54,005 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010201, 省内政策
+2019-01-14 19:33:54,006 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010202, 国家政策
+2019-01-14 19:33:54,006 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010203, 地方政策
+2019-01-14 19:33:54,007 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010301, 培训动态
+2019-01-14 19:33:54,007 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010401, 节约用电
+2019-01-14 19:33:54,007 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010402, 绿色用电
+2019-01-14 19:33:54,008 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010403, 环保用电
+2019-01-14 19:33:54,009 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010404, 智能用电
+2019-01-14 19:33:54,009 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010405, 有序用电
+2019-01-14 19:33:54,009 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010501, 项目进展
+2019-01-14 19:33:54,010 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010601, 服务模式
+2019-01-14 19:33:54,010 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010701, 最新政策
+2019-01-14 19:33:54,011 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010702, 通知公告
+2019-01-14 19:33:54,011 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010801, 需求响应
+2019-01-14 19:33:54,011 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030101, 节约用电
+2019-01-14 19:33:54,012 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030102, 绿色用电
+2019-01-14 19:33:54,012 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030103, 环保用电
+2019-01-14 19:33:54,012 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030104, 智能用电
+2019-01-14 19:33:54,013 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030105, 有序用电
+2019-01-14 19:33:54,013 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030201, 典型案例
+2019-01-14 19:33:54,014 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030301, 典型案例
+2019-01-14 19:33:54,014 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040101, 公益宣传
+2019-01-14 19:33:54,014 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040102, 培训资料
+2019-01-14 19:33:54,015 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040201, 节约用电
+2019-01-14 19:33:54,016 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040202, 绿色用电
+2019-01-14 19:33:54,017 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040203, 环保用电
+2019-01-14 19:33:54,017 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040204, 智能用电
+2019-01-14 19:33:54,018 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040205, 有序用电
+2019-01-14 19:33:54,018 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040301, 贷款资料
+2019-01-14 19:33:54,019 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040401, 考核报告
+2019-01-14 19:33:54,021 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010101, 典型案例
+2019-01-14 19:33:54,023 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010201, 典型案例
+2019-01-14 19:33:54,023 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010301, 典型案例
+2019-01-14 19:33:54,023 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010401, 典型案例
+2019-01-14 19:33:54,024 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010501, 典型案例
+2019-01-14 19:33:54,024 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020101, 技术资料
+2019-01-14 19:33:54,025 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020102, 技术产品提供商
+2019-01-14 19:33:54,025 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020201, 技术资料
+2019-01-14 19:33:54,025 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020202, 技术产品提供商
+2019-01-14 19:33:54,025 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020301, 技术资料
+2019-01-14 19:33:54,026 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020302, 技术产品提供商
+2019-01-14 19:33:54,027 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020401, 技术资料
+2019-01-14 19:33:54,030 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020402, 技术产品提供商
+2019-01-14 19:33:54,031 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020501, 技术资料
+2019-01-14 19:33:54,032 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020502, 技术产品提供商
+2019-01-14 19:33:54,032 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- <==      Total: 64
+2019-01-14 19:33:54,048 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: SELECT COUNT(1) FROM hbxqc_zxxx 
+2019-01-14 19:33:54,048 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:33:54,051 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: COUNT(1)
+2019-01-14 19:33:54,052 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 42
+2019-01-14 19:33:54,054 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: select zxid, num, title, zflid, source, DATE_FORMAT(time,'%Y-%m-%d') time, state, inds from hbxqc_zxxx order by num LIMIT 0,10 
+2019-01-14 19:33:54,055 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:33:54,057 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: zxid, num, title, zflid, source, time, state, inds
+2019-01-14 19:33:54,058 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: a341deb2e5ef40d6a7e3838046a0c294, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:33:54,058 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 2b4a860b2fed48b093b3dec10e3cfc5a, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:54,059 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 37db3e249d65432a88db48003fa9fce1, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:33:54,060 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 8627d9e73911401498502bf2847a5cf5, , , null, , 2019-01-07, 0, 
+2019-01-14 19:33:54,060 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: fa1a43c6397947b684ef56ca6d707514, , qqqqq, 10010102, , 2019-01-03, 1, 
+2019-01-14 19:33:54,063 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 6d1ad1e349b34d3aa2735f1eb46567e6, , , null, , 2019-01-07, 1, 
+2019-01-14 19:33:54,064 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1fc939ff73f14423b3b5068a95fdb5cc, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:54,065 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 9a5d7746ab424ac1aa88526a8bc01e43, , , null, , 2019-01-03, 1, 
+2019-01-14 19:33:54,065 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 1c51395275ed4d5c8aa9c80ab7e65dc2, , , null, , 2019-01-07, 1, 
+2019-01-14 19:33:54,065 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 7993f6352c364d19b43f62c7b04f4e67, , , null, , 2019-01-08, 0, 
+2019-01-14 19:33:54,066 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- <==      Total: 10
+2019-01-14 19:34:08,786 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:34:28,029 INFO [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-993]- Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ad11a56: startup date [Mon Jan 14 19:10:14 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1
+2019-01-14 19:34:28,031 INFO [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry-65]- Unregistering application psmp-portal with eureka with status DOWN
+2019-01-14 19:34:28,032 WARN [com.netflix.discovery.DiscoveryClient-1297]- Saw local status change event StatusChangeEvent [timestamp=1547465668032, current=DOWN, previous=UP]
+2019-01-14 19:34:28,033 INFO [org.springframework.context.support.DefaultLifecycleProcessor-366]- Stopping beans in phase 0
+2019-01-14 19:34:28,035 INFO [com.netflix.discovery.DiscoveryClient-888]- Shutting down DiscoveryClient ...
+2019-01-14 19:34:28,036 INFO [com.netflix.discovery.DiscoveryClient-826]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081: registering service...
+2019-01-14 19:34:28,047 INFO [com.netflix.discovery.DiscoveryClient-835]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081 - registration status: 204
+2019-01-14 19:34:28,053 INFO [com.netflix.discovery.DiscoveryClient-922]- Unregistering ...
+2019-01-14 19:34:28,067 INFO [com.netflix.discovery.DiscoveryClient-924]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081 - deregister  status: 200
+2019-01-14 19:34:28,073 INFO [com.netflix.discovery.DiscoveryClient-911]- Completed shut down of DiscoveryClient
+2019-01-14 19:34:28,074 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-451]- Unregistering JMX-exposed beans on shutdown
+2019-01-14 19:34:28,074 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-183]- Unregistering JMX-exposed beans
+2019-01-14 19:34:28,098 INFO [com.alibaba.druid.pool.DruidDataSource-1863]- {dataSource-1} closed
+2019-01-14 19:34:35,183 INFO [org.springframework.context.annotation.AnnotationConfigApplicationContext-590]- Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1: startup date [Mon Jan 14 19:34:35 CST 2019]; root of context hierarchy
+2019-01-14 19:34:35,514 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:34:35,594 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$170ba615] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:34:35,847 INFO [com.alonginfo.psmpportal.PsmpPortalApplication-663]- The following profiles are active: dev
+2019-01-14 19:34:35,866 INFO [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-590]- Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4dd94a58: startup date [Mon Jan 14 19:34:35 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1
+2019-01-14 19:34:36,437 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate-163]- Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-01-14 19:34:36,731 INFO [org.springframework.cloud.context.scope.GenericScope-294]- BeanFactory id=cfd4dc97-0e01-31d4-a4d1-040980a379ed
+2019-01-14 19:34:36,748 INFO [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor-154]- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-14 19:34:36,844 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$faf1a318] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:34:36,883 INFO [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-328]- Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$170ba615] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-14 19:34:37,106 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-91]- Tomcat initialized with port(s): 8081 (http)
+2019-01-14 19:34:37,118 INFO [org.apache.coyote.http11.Http11NioProtocol-180]- Initializing ProtocolHandler ["http-nio-8081"]
+2019-01-14 19:34:37,127 INFO [org.apache.catalina.core.StandardService-180]- Starting service [Tomcat]
+2019-01-14 19:34:37,128 INFO [org.apache.catalina.core.StandardEngine-180]- Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-01-14 19:34:37,132 INFO [org.apache.catalina.core.AprLifecycleListener-180]- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liqiang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-14 19:34:37,241 INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/portal]-180]- Initializing Spring embedded WebApplicationContext
+2019-01-14 19:34:37,241 INFO [org.springframework.web.context.ContextLoader-285]- Root WebApplicationContext: initialization completed in 1375 ms
+2019-01-14 19:34:37,409 INFO [org.springframework.boot.web.servlet.ServletRegistrationBean-186]- Servlet dispatcherServlet mapped to [/]
+2019-01-14 19:34:37,415 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-14 19:34:37,416 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-14 19:34:37,417 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-14 19:34:37,417 INFO [org.springframework.boot.web.servlet.FilterRegistrationBean-245]- Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-14 19:34:37,757 INFO [com.alibaba.druid.pool.DruidDataSource-947]- {dataSource-1} inited
+2019-01-14 19:34:38,041 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.bannerGL.model.BannerGL.
+2019-01-14 19:34:38,042 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.bannerGL.model.BannerGL ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:34:38,081 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.caseGL.model.CaseGL.
+2019-01-14 19:34:38,081 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.caseGL.model.CaseGL ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:34:38,106 WARN [com.baomidou.mybatisplus.toolkit.TableInfoHelper-192]- Warn: Could not find @TableId in Class: com.alonginfo.psmpportal.informationMgt.model.InformationMgt.
+2019-01-14 19:34:38,107 WARN [com.baomidou.mybatisplus.mapper.AutoSqlInjector-145]- class com.alonginfo.psmpportal.informationMgt.model.InformationMgt ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2019-01-14 19:34:38,556 WARN [com.netflix.config.sources.URLConfigurationSource-121]- No URLs will be polled as dynamic configuration sources.
+2019-01-14 19:34:38,556 INFO [com.netflix.config.sources.URLConfigurationSource-122]- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-14 19:34:38,560 WARN [com.netflix.config.sources.URLConfigurationSource-121]- No URLs will be polled as dynamic configuration sources.
+2019-01-14 19:34:38,560 INFO [com.netflix.config.sources.URLConfigurationSource-122]- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-01-14 19:34:38,637 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:34:38,791 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-574]- Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4dd94a58: startup date [Mon Jan 14 19:34:35 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@24d09c1
+2019-01-14 19:34:38,802 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter-610]- Detected ResponseBodyAdvice bean in responseJsonAdvice
+2019-01-14 19:34:38,861 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttsUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:34:38,863 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:34:38,863 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.ZlxxGL.model.Jctts com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.queryOneJctts(java.lang.String)
+2019-01-14 19:34:38,863 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[POST]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.createJctts(com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:34:38,864 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[PUT]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.updateJctts(com.alonginfo.psmpportal.ZlxxGL.model.Jctts)
+2019-01-14 19:34:38,864 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.deletejctts(java.lang.String)
+2019-01-14 19:34:38,864 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/jcttss],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.JcttsController.deletejcttss(java.lang.String[])
+2019-01-14 19:34:38,866 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materialUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:34:38,866 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:34:38,866 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.queryOneZlxx(java.lang.String)
+2019-01-14 19:34:38,867 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[POST]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.createZlxx(com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:34:38,867 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[PUT]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.updateIZlxx(com.alonginfo.psmpportal.ZlxxGL.model.ZlxxGL)
+2019-01-14 19:34:38,867 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.deleteZlxx(java.lang.String)
+2019-01-14 19:34:38,868 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/materials],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.ZlxxGL.controller.ZlxxGLController.deleteZlxxs(java.lang.String[])
+2019-01-14 19:34:38,869 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/bannerUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:34:38,869 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:34:38,869 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.bannerGL.model.BannerGL com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.queryOneBanner(java.lang.String)
+2019-01-14 19:34:38,870 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[POST]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.createBanner(com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:34:38,870 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[PUT]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.updateBanner(com.alonginfo.psmpportal.bannerGL.model.BannerGL)
+2019-01-14 19:34:38,870 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.deleteBanners(java.lang.String[])
+2019-01-14 19:34:38,870 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/banners/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.bannerGL.controller.BannerGLController.deleteBanner(java.lang.String)
+2019-01-14 19:34:38,872 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/caseUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.caseGL.controller.CaseGLController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:34:38,872 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.caseGL.controller.CaseGLController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:34:38,872 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.caseGL.model.CaseGL com.alonginfo.psmpportal.caseGL.controller.CaseGLController.queryOneCase(java.lang.String)
+2019-01-14 19:34:38,873 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[POST]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.createCase(com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:34:38,873 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[PUT]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.updateCase(com.alonginfo.psmpportal.caseGL.model.CaseGL)
+2019-01-14 19:34:38,873 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.deleteCase(java.lang.String[])
+2019-01-14 19:34:38,873 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/cases/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.caseGL.controller.CaseGLController.deleteCase(java.lang.String)
+2019-01-14 19:34:38,875 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations/{id}],methods=[GET]}" onto public com.alonginfo.psmpportal.informationMgt.model.InformationMgt com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.queryDetail(java.lang.String)
+2019-01-14 19:34:38,875 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[POST]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.createInformation(com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:34:38,875 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[PUT]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.updateInformation(com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:34:38,876 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations/{id}],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.deleteInformation(java.lang.String)
+2019-01-14 19:34:38,876 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[DELETE]}" onto public int com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.deleteInformations(java.lang.String[])
+2019-01-14 19:34:38,876 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informationUploads],methods=[POST],consumes=[multipart/form-data]}" onto public java.util.Map<java.lang.String, java.lang.String> com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.upload(org.springframework.web.multipart.MultipartFile)
+2019-01-14 19:34:38,877 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/informations],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.alonginfo.psmpportal.informationMgt.controller.InformationMgtController.queryList(java.lang.Integer,java.lang.Integer,com.alonginfo.psmpportal.informationMgt.model.InformationMgt)
+2019-01-14 19:34:38,877 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/menus/{value}],methods=[GET]}" onto public java.util.List<com.alonginfo.psmpportal.menuGL.model.Menu> com.alonginfo.psmpportal.menuGL.controller.MenuController.queryList(java.lang.Integer)
+2019-01-14 19:34:38,877 INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping-547]- Mapped "{[/error]}" onto public void com.alonginfo.psmpcore.exception.MyErrorController.errorHandler()
+2019-01-14 19:34:38,909 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:34:38,910 INFO [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping-373]- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-14 19:34:38,927 INFO [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver-288]- Detected @ExceptionHandler methods in globalExceptionHandler
+2019-01-14 19:34:38,927 INFO [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver-294]- Detected ResponseBodyAdvice implementation in responseJsonAdvice
+2019-01-14 19:34:39,692 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-433]- Registering beans for JMX exposure on startup
+2019-01-14 19:34:39,693 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'dataSource' has been autodetected for JMX exposure
+2019-01-14 19:34:39,702 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2019-01-14 19:34:39,703 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2019-01-14 19:34:39,703 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-895]- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2019-01-14 19:34:39,706 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2019-01-14 19:34:39,719 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2019-01-14 19:34:39,730 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-675]- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4dd94a58,type=ConfigurationPropertiesRebinder]
+2019-01-14 19:34:39,736 INFO [org.springframework.jmx.export.annotation.AnnotationMBeanExporter-668]- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2019-01-14 19:34:39,741 INFO [org.springframework.context.support.DefaultLifecycleProcessor-351]- Starting beans in phase 0
+2019-01-14 19:34:39,748 INFO [org.springframework.cloud.netflix.eureka.InstanceInfoFactory-71]- Setting initial instance status as: STARTING
+2019-01-14 19:34:39,788 INFO [com.netflix.discovery.DiscoveryClient-349]- Initializing Eureka in region us-east-1
+2019-01-14 19:34:40,022 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-70]- Using JSON encoding codec LegacyJacksonJson
+2019-01-14 19:34:40,022 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-71]- Using JSON decoding codec LegacyJacksonJson
+2019-01-14 19:34:40,122 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-80]- Using XML encoding codec XStreamXml
+2019-01-14 19:34:40,122 INFO [com.netflix.discovery.provider.DiscoveryJerseyProvider-81]- Using XML decoding codec XStreamXml
+2019-01-14 19:34:40,294 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration
+2019-01-14 19:34:40,313 INFO [com.netflix.discovery.DiscoveryClient-958]- Disable delta property : false
+2019-01-14 19:34:40,313 INFO [com.netflix.discovery.DiscoveryClient-959]- Single vip registry refresh property : null
+2019-01-14 19:34:40,313 INFO [com.netflix.discovery.DiscoveryClient-960]- Force full registry fetch : false
+2019-01-14 19:34:40,313 INFO [com.netflix.discovery.DiscoveryClient-961]- Application is null : false
+2019-01-14 19:34:40,314 INFO [com.netflix.discovery.DiscoveryClient-962]- Registered Applications size is zero : true
+2019-01-14 19:34:40,314 INFO [com.netflix.discovery.DiscoveryClient-964]- Application version is -1: true
+2019-01-14 19:34:40,314 INFO [com.netflix.discovery.DiscoveryClient-1047]- Getting all instance registry info from the eureka server
+2019-01-14 19:34:40,463 INFO [com.netflix.discovery.DiscoveryClient-1056]- The response status is 200
+2019-01-14 19:34:40,466 INFO [com.netflix.discovery.DiscoveryClient-1264]- Starting heartbeat executor: renew interval is: 30
+2019-01-14 19:34:40,468 INFO [com.netflix.discovery.InstanceInfoReplicator-60]- InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-01-14 19:34:40,473 INFO [com.netflix.discovery.DiscoveryClient-449]- Discovery Client initialized at timestamp 1547465680472 with initial instances count: 1
+2019-01-14 19:34:40,477 INFO [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry-42]- Registering application psmp-portal with eureka with status UP
+2019-01-14 19:34:40,478 INFO [com.netflix.discovery.DiscoveryClient-1299]- Saw local status change event StatusChangeEvent [timestamp=1547465680477, current=UP, previous=STARTING]
+2019-01-14 19:34:40,479 INFO [com.netflix.discovery.DiscoveryClient-826]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081: registering service...
+2019-01-14 19:34:40,494 INFO [org.apache.coyote.http11.Http11NioProtocol-180]- Starting ProtocolHandler ["http-nio-8081"]
+2019-01-14 19:34:40,525 INFO [com.netflix.discovery.DiscoveryClient-835]- DiscoveryClient_PSMP-PORTAL/10.10.132.59:psmp-portal:8081 - registration status: 204
+2019-01-14 19:34:40,527 INFO [org.apache.tomcat.util.net.NioSelectorPool-180]- Using a shared selector for servlet write/read
+2019-01-14 19:34:40,548 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer-206]- Tomcat started on port(s): 8081 (http) with context path '/portal'
+2019-01-14 19:34:40,549 INFO [org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration-124]- Updating port to 8081
+2019-01-14 19:34:40,554 INFO [com.alonginfo.psmpportal.PsmpPortalApplication-59]- Started PsmpPortalApplication in 6.062 seconds (JVM running for 7.419)
+2019-01-14 19:35:33,805 INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/portal]-180]- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-14 19:35:33,806 INFO [org.springframework.web.servlet.DispatcherServlet-494]- FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-14 19:35:33,830 INFO [org.springframework.web.servlet.DispatcherServlet-509]- FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2019-01-14 19:35:33,941 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==>  Preparing: select zflid,flmc from hbxqc_menu2 WHERE 1=1 
+2019-01-14 19:35:33,962 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- ==> Parameters: 
+2019-01-14 19:35:33,977 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==    Columns: zflid, flmc
+2019-01-14 19:35:33,977 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100101, 新闻中心 
+2019-01-14 19:35:33,979 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100102, 政策法规
+2019-01-14 19:35:33,979 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100103, 宣传培训
+2019-01-14 19:35:33,980 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100104, 技术应用
+2019-01-14 19:35:33,980 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100105, 亚行贷款
+2019-01-14 19:35:33,980 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100106, 电能服务
+2019-01-14 19:35:33,980 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100107, 电力交易
+2019-01-14 19:35:33,981 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100108, 需求响应
+2019-01-14 19:35:33,981 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100201, 首页
+2019-01-14 19:35:33,982 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100202, 政策法规
+2019-01-14 19:35:33,982 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100301, 技术应用
+2019-01-14 19:35:33,982 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100302, 电能服务
+2019-01-14 19:35:33,983 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100303, 需求响应
+2019-01-14 19:35:33,983 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100401, 宣传培训
+2019-01-14 19:35:33,984 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100402, 技术应用
+2019-01-14 19:35:33,986 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100403, 亚行贷款
+2019-01-14 19:35:33,988 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 100404, DSM考核
+2019-01-14 19:35:33,989 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010101, 新闻动态
+2019-01-14 19:35:33,989 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010102, 中心动态
+2019-01-14 19:35:33,989 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010201, 省内政策
+2019-01-14 19:35:33,989 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010202, 国家政策
+2019-01-14 19:35:33,990 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010203, 地方政策
+2019-01-14 19:35:33,990 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010301, 培训动态
+2019-01-14 19:35:33,990 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010401, 节约用电
+2019-01-14 19:35:33,991 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010402, 绿色用电
+2019-01-14 19:35:33,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010403, 环保用电
+2019-01-14 19:35:33,992 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010404, 智能用电
+2019-01-14 19:35:33,993 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010405, 有序用电
+2019-01-14 19:35:33,994 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010501, 项目进展
+2019-01-14 19:35:33,994 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010601, 服务模式
+2019-01-14 19:35:33,995 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010701, 最新政策
+2019-01-14 19:35:33,995 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010702, 通知公告
+2019-01-14 19:35:33,996 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10010801, 需求响应
+2019-01-14 19:35:33,996 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030101, 节约用电
+2019-01-14 19:35:33,996 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030102, 绿色用电
+2019-01-14 19:35:33,996 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030103, 环保用电
+2019-01-14 19:35:33,997 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030104, 智能用电
+2019-01-14 19:35:33,997 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030105, 有序用电
+2019-01-14 19:35:33,997 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030201, 典型案例
+2019-01-14 19:35:33,997 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10030301, 典型案例
+2019-01-14 19:35:33,998 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040101, 公益宣传
+2019-01-14 19:35:33,998 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040102, 培训资料
+2019-01-14 19:35:33,998 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040201, 节约用电
+2019-01-14 19:35:33,998 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040202, 绿色用电
+2019-01-14 19:35:33,999 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040203, 环保用电
+2019-01-14 19:35:33,999 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040204, 智能用电
+2019-01-14 19:35:33,999 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040205, 有序用电
+2019-01-14 19:35:34,000 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040301, 贷款资料
+2019-01-14 19:35:34,000 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 10040401, 考核报告
+2019-01-14 19:35:34,000 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010101, 典型案例
+2019-01-14 19:35:34,001 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010201, 典型案例
+2019-01-14 19:35:34,002 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010301, 典型案例
+2019-01-14 19:35:34,003 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010401, 典型案例
+2019-01-14 19:35:34,003 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1003010501, 典型案例
+2019-01-14 19:35:34,004 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020101, 技术资料
+2019-01-14 19:35:34,004 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020102, 技术产品提供商
+2019-01-14 19:35:34,004 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020201, 技术资料
+2019-01-14 19:35:34,005 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020202, 技术产品提供商
+2019-01-14 19:35:34,005 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020301, 技术资料
+2019-01-14 19:35:34,005 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020302, 技术产品提供商
+2019-01-14 19:35:34,005 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020401, 技术资料
+2019-01-14 19:35:34,006 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020402, 技术产品提供商
+2019-01-14 19:35:34,006 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020501, 技术资料
+2019-01-14 19:35:34,006 TRACE [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-165]- <==        Row: 1004020502, 技术产品提供商
+2019-01-14 19:35:34,007 DEBUG [com.alonginfo.psmpportal.menuGL.dao.MenuDao.queryAll-159]- <==      Total: 64
+2019-01-14 19:35:34,013 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==>  Preparing: select zxid, num, title, zflid, source, DATE_FORMAT(time,'%Y-%m-%d') time, state, inds from hbxqc_zxxx order by num 
+2019-01-14 19:35:34,014 DEBUG [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-159]- ==> Parameters: 
+2019-01-14 19:35:34,019 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==    Columns: zxid, num, title, zflid, source, time, state, inds
+2019-01-14 19:35:34,020 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 9a5d7746ab424ac1aa88526a8bc01e43, , , null, , 2019-01-03, 1, 
+2019-01-14 19:35:34,021 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 9e47b29398fc470c96cf13cf47b0fb81, , , null, , 2019-01-07, 1, 
+2019-01-14 19:35:34,022 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 8627d9e73911401498502bf2847a5cf5, , , null, , 2019-01-07, 0, 
+2019-01-14 19:35:34,023 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 7993f6352c364d19b43f62c7b04f4e67, , , null, , 2019-01-08, 0, 
+2019-01-14 19:35:34,026 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 6d1ad1e349b34d3aa2735f1eb46567e6, , , null, , 2019-01-07, 1, 
+2019-01-14 19:35:34,029 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: a341deb2e5ef40d6a7e3838046a0c294, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:35:34,032 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: a46012e4ff7e46c9a0636319bf8adcd0, , , null, , 2019-01-07, 0, 
+2019-01-14 19:35:34,033 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: b9bca5550c644bbea6ccb938aadc062f, , , null, , 2019-01-07, 1, 
+2019-01-14 19:35:34,034 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 37db3e249d65432a88db48003fa9fce1, , , 100401, , 2019-01-03, 1, 
+2019-01-14 19:35:34,035 TRACE [com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao.queryList-165]- <==        Row: 2b4a860b2fed48b093b3dec10e3cfc5a, , , null, , 2019-01-03, 1, 
+2019-01-14 19:39:40,308 INFO [com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver-43]- Resolving eureka endpoints via configuration

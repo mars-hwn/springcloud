@@ -1,0 +1,8 @@
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://122.113.5.210:8888/eureka/
+      defaultZone: http://localhost:8888/eureka/

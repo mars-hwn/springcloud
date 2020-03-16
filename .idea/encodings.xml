@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-client-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-portal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-portal-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-portal-website" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-stream-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-stream-consumer1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-stream-consumer2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-stream-consumer3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/psmp-stream-producer" charset="UTF-8" />
+  </component>
+</project>

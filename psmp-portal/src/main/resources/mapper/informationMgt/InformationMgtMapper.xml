@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.alonginfo.psmpportal.informationMgt.dao.InformationMgtDao" >
+    <!-- 查询资讯信息列表 -->
+    <select id="queryList" resultType="InformationMgt" parameterType="InformationMgt">
+        select
+            zxid,
+            num,
+            title,
+            zflid,
+            source,
+            DATE_FORMAT(time,'%Y-%m-%d') time,
+            state,
+            inds
+        from hbxqc_zxxx
+        <where>
+            <if test="zflid != null and zflid!= ''" >
+                zflid = #{zflid}
+            </if>
+            <if test="title != null and title!= ''" >
+                and title like concat('%',#{title},'%')
+            </if>
+            <if test="time != null and time!= ''" >
+                and date_format(time, '%Y-%m') = #{time}
+            </if>
+        </where>
+        order by num
+    </select>
+
+    <!-- 查询资讯信息详情 -->
+    <select id="queryDetail" resultType="InformationMgt" parameterType="java.lang.String">
+        select
+            title,
+            zflid,
+            inds,
+            num,
+            plurl,
+            content,
+            source
+        from hbxqc_zxxx
+        where zxid = #{zxid}
+    </select>
+
+    <!-- 新增资讯信息 -->
+    <insert id="createInformation" parameterType="InformationMgt">
+        insert into hbxqc_zxxx (
+            zxid,title,zflid,inds,num,
+            plurl,content,source,state,time
+        ) values (
+            #{zxid},#{title},#{zflid},#{inds},#{num},
+            #{plurl},#{content},#{source},#{state},sysdate()
+        )
+    </insert>
+
+    <!-- 更新资讯信息 -->
+    <update id="updateInformation" parameterType="InformationMgt">
+        update hbxqc_zxxx set
+            <if test="zflid != null" >
+                zflid = #{zflid},
+            </if>
+            <if test="title != null" >
+                title = #{title},
+            </if>
+            <if test="inds != null" >
+                inds = #{inds},
+            </if>
+
+            <if test="num != null" >
+                num = #{num},
+            </if>
+            <if test="plurl != null" >
+                plurl = #{plurl},
+            </if>
+            <if test="content != null" >
+                content = #{content},
+            </if>
+            <if test="source != null" >
+                source = #{source},
+            </if>
+            <if test="state != null" >
+                state = #{state},
+            </if>
+            <if test="zxid != null" >
+                zxid = #{zxid}
+            </if>
+        where zxid = #{zxid}
+    </update>
+
+    <!-- 删除资讯信息 -->
+    <delete id="deleteInformation" parameterType="java.lang.String">
+        delete from hbxqc_zxxx
+        where zxid = #{zxid}
+    </delete>
+    <delete id="deleteInformations" parameterType="java.lang.String">
+        delete from hbxqc_zxxx
+        where zxid IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

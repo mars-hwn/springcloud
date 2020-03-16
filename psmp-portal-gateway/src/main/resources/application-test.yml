@@ -1,0 +1,10 @@
+server:
+  port: 9090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://122.113.5.210:9999/eureka/
+logging:
+  level:
+    com.alonginfo: debug

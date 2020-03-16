@@ -1,0 +1,10 @@
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  application:
+    name: eurka-server
+  profiles:
+    active: dev

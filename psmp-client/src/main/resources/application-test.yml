@@ -1,0 +1,7 @@
+server:
+  port: 9085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://122.113.5.210:9999/eureka/

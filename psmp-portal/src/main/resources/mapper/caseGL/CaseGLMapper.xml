@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alonginfo.psmpportal.caseGL.dao.CaseGLDao" >
+
+   <!--查询案例信息列表-->
+  <select id="queryList" resultType="caseGL" parameterType="caseGL">
+    select
+      caid,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      content,
+      source,
+      hp,
+      state,
+      DATE_FORMAT(time,'%Y-%m-%d') time
+    from hbxqc_case
+    <where>
+      <if test="zflid != null and zflid!= ''" >
+        zflid = #{zflid}
+      </if>
+      <if test="title != null and title!= ''" >
+        and title like concat('%',#{title},'%')
+      </if>
+      <if test="time != null and time!= ''" >
+        and date_format(time, '%Y-%m') = #{time}
+      </if>
+    </where>
+    order by num
+  </select>
+  <!--查询案例信息详细 -->
+  <select id="queryOneCase" resultType="caseGL" parameterType="String">
+    select
+      caid,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      content,
+      source,
+      hp,
+      state
+    from hbxqc_case
+    WHERE caid = #{caid}
+  </select>
+   <!--新增案例信息-->
+  <insert id="insertCase" parameterType="caseGL">
+    insert into hbxqc_case (
+      caid,
+      zflid,
+      num,
+      title,
+      plurl,
+      tpgs,
+      tpdx,
+      content,
+      source,
+      hp,
+      state,
+      time
+    ) values (
+    #{caid},#{zflid},#{num},#{title},#{plurl},
+    #{tpgs},#{tpdx},#{content},#{source},#{hp},#{state},sysdate()
+    )
+  </insert>
+   <!--更新案例信息 -->
+  <update id="updateCase" parameterType="caseGL">
+    update hbxqc_case
+    <set>
+      <if test="zflid!=null">
+        zflid = #{zflid},
+      </if>
+      <if test="num!=null">
+        num = #{num},
+      </if>
+      <if test="title!=null">
+        title = #{title},
+      </if>
+      <if test="plurl!=null">
+        plurl = #{plurl},
+      </if>
+      <if test="tpgs!=null">
+        tpgs = #{tpgs},
+      </if>
+      <if test="tpdx!=null">
+        tpdx = #{tpdx},
+      </if>
+      <if test="source!=null">
+        source = #{source},
+      </if>
+      <if test="time!=null">
+        time = #{time},
+      </if>
+      <if test="state!=null">
+        state = #{state},
+      </if>
+      <if test="content!=null">
+        content = #{content},
+      </if>
+    </set>
+    where caid = #{caid}
+  </update>
+  <delete id="deleteCase">
+    delete from hbxqc_case
+    where caid = #{caid}
+  </delete>
+  <delete id="deleteCases" parameterType="java.lang.String">
+    delete from hbxqc_case
+    where caid in
+    <foreach collection="ids" item="id" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </delete>
+  <select id="queryByNums" resultType="caseGL">
+    select caid,num from hbxqc_case WHERE 1=1
+    <if test="num==1">
+      and num=1 or num=2 or num=3
+    </if>
+    <if test="num==2">
+      and  num=2 or num=3
+    </if>
+    <if test="num==3">
+      and num=3
+    </if>
+  </select>
+</mapper>

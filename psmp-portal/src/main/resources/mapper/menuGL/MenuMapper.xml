@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.alonginfo.psmpportal.menuGL.dao.MenuDao">
+    <resultMap id="menuMap" type="menu">
+        <id property="value" column="zflid"/>
+        <result column="flmc" property="label"/>
+        <collection property="children" ofType="menu" column="zFLID" select="queryMenuByFlid">
+            <id property="value" column="zflid"/>
+            <result column="flmc" property="label"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryMenuByFlid" resultMap="menuMap">
+        select m.zFLID,m.FLMC,m.flid from hbxqc_menu2 m WHERE m.flid=#{zFLID}
+    </select>
+    <select id="queryMenuAllByFlid" resultMap="menuMap" >
+        select m.zFLID,m.FLMC,m.flid from hbxqc_menu2 m WHERE m.flid=#{value}
+    </select>
+    <select id="queryAll" resultType="java.util.Map">
+        select zflid,flmc from hbxqc_menu2 WHERE 1=1
+        <if test="zflid!=null">
+             and zflid=#{zflid}
+        </if>
+    </select>
+</mapper>

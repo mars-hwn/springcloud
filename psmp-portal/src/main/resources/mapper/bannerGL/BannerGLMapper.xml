@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.alonginfo.psmpportal.bannerGL.dao.BannerGLDao">
+
+    <!-- 查询banner信息列表 -->
+    <select id="queryList" resultType="BannerGL" parameterType="BannerGL">
+        select
+            bnid,
+            zflid,
+            num,
+            title,
+            plurl,
+            tpgs,
+            tpdx,
+            line,
+            DATE_FORMAT(time,'%Y-%m-%d') time,
+            state
+        from hbxqc_banner
+        <where>
+            <if test="zflid != null and zflid!= ''" >
+                zflid = #{zflid}
+            </if>
+            <if test="title != null and title!= ''" >
+                and title like concat('%',#{title},'%')
+            </if>
+            <if test="time != null and time!= ''" >
+                and date_format(time, '%Y-%m') = #{time}
+            </if>
+        </where>
+        order by num
+    </select>
+    <!-- 查询banner信息详细 -->
+    <select id="queryOneBanner" resultType="BannerGL" parameterType="String">
+        select
+            bnid,
+            zflid,
+            num,
+            title,
+            plurl,
+            tpgs,
+            tpdx,
+            line,
+            state
+        from hbxqc_banner
+        WHERE bnid = #{bnid}
+    </select>
+    <!-- 新增banner信息 -->
+    <insert id="insertBanner" parameterType="BannerGL">
+        insert into hbxqc_banner (
+            bnid,
+            zflid,
+            num,
+            title,
+            plurl,
+            tpgs,
+            tpdx,
+            line,
+            time,
+            state
+        ) values (
+        #{bnid},#{zflid},#{num},#{title},#{plurl},
+        #{tpgs},#{tpdx},#{line},sysdate(),#{state}
+        )
+    </insert>
+    <!-- 更新banner信息 -->
+    <update id="updateBanner" parameterType="BannerGL">
+        update hbxqc_banner
+        <set>
+            <if test="zflid!=null">
+                zflid = #{zflid},
+            </if>
+            <if test="num!=null">
+                num = #{num},
+            </if>
+            <if test="title!=null">
+                title = #{title},
+            </if>
+            <if test="plurl!=null">
+                plurl = #{plurl},
+            </if>
+            <if test="tpgs!=null">
+                tpgs = #{tpgs},
+            </if>
+            <if test="tpdx!=null">
+                tpdx = #{tpdx},
+            </if>
+            <if test="line!=null">
+                line = #{line},
+            </if>
+            <if test="time!=null">
+                time = #{time},
+            </if>
+            <if test="state!=null">
+                state = #{state},
+            </if>
+        </set>
+
+        where bnid = #{bnid}
+    </update>
+    <delete id="deleteBanner">
+        delete from hbxqc_banner
+        where bnid = #{bnid}
+    </delete>
+    <select id="queryByNums" resultType="BannerGL">
+        select bnid,num from hbxqc_banner WHERE 1=1
+        <if test="num==1">
+            and num=1 or num=2 or num=3
+        </if>
+        <if test="num==2">
+            and  num=2 or num=3
+        </if>
+        <if test="num==3">
+            and num=3
+        </if>
+    </select>
+    <delete id="deleteBanners" parameterType="java.lang.String">
+        delete from hbxqc_banner
+        where bnid in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
